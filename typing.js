@@ -28,9 +28,9 @@ function setupEventListeners() {
 // GESTION DU TIMER
 function timer() {
     timerInterval = setInterval(function() {
-        time--;
+         time--;
         elements.timer.textContent = time;
-
+         
         if (time <= 0) {
             clearInterval(timerInterval);
         }
@@ -48,22 +48,29 @@ function compterEspaces() {
     elements.compteur.textContent = spaceCount;
 }
 
-// COLORATION DU TEXTE
 function colorierTexte() {
     const texteSaisi = elements.input.value;
     let resultat = "";
     
     for (let i = 0; i < texteOriginal.length; i++) {
-        if (i < texteSaisi.length && texteSaisi[i] === texteOriginal[i]) {
-            resultat += '<span style="color: green">' + texteOriginal[i] + '</span>';
+        const charOriginal = texteOriginal[i];
+        const charSaisi = i < texteSaisi.length ? texteSaisi[i] : null;
+        
+        if (charSaisi !== null) {
+            if (charSaisi === charOriginal) {
+                resultat += '<span class="correct">'+charOriginal+'</span>';
+            } else if (charOriginal === ' ' && charSaisi === ' ') {
+                resultat += '<span class="correct"> </span>';
+            } else {
+                resultat += '<span class="incorrect">'+charOriginal+'</span>';
+            }
         } else {
-            resultat += '<span style="color: red">' + texteOriginal[i] + '</span>';
+            resultat += charOriginal;
         }
     }
     
     elements.challengeTexte.innerHTML = resultat;
 }
-
 // CALCUL DU TAUX
 function calculTaux() {
     let calcul = spaceCount / 60 * 100;
@@ -74,6 +81,14 @@ function calculTaux() {
 
 function end() {
     clearInterval(timerInterval);
+    if (time == 0){
+        alert("la duree est fini !!! ");
+    }else {
+        alert(`Félisitation !! votre nivesu est ${spaceCount} words/min`);
+        alert(`Votre score ${calcul} `);
+
+
+    }
 }
 
 // DÉMARRAGE
