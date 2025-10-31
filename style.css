@@ -6,14 +6,17 @@
 
 }
 body{
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://i.pinimg.com/736x/41/9e/ee/419eee88c1581c027fcd0a46fe468b2d.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
     
 }
 .container{
-    background-color: bisque;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,8 +48,10 @@ body{
 
 }
 .statistic :hover{
-    box-shadow: 10px 15px 12px rgb(159, 238, 130);
+    box-shadow: 10px 15px 12px rgb(146, 252, 170);
     transition: all 1s;
+      cursor: pointer;
+
 
 }
 .input{
@@ -60,3 +65,29 @@ body{
     box-shadow: 10px 15px 12px violet;
 }
 
+#challenge_texte{
+    font-size: 20px;
+
+}
+.choix{
+display: flex;
+width: 100%;
+justify-content: space-evenly;
+padding: 20px;
+margin: 20px;}
+#start{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+   border-color: violet;
+   color: blueviolet;
+   background-color: rgb(251, 186, 251);
+   box-shadow: 10px 10px 17px blueviolet;
+   font-size: 20px;
+}
+#start:hover{
+border-color: rgb(151, 242, 149);
+   color: rgb(1, 73, 12);
+   background-color: rgb(177, 255, 180);
+   box-shadow: 10px 10px 17px rgb(14, 234, 21);
+transition: 0.5s;}
