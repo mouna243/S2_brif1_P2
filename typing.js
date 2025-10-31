@@ -53,4 +53,28 @@ function colorierTexte() {
     const texteSaisi = elements.input.value;
     let resultat = "";
     
+    for (let i = 0; i < texteOriginal.length; i++) {
+        if (i < texteSaisi.length && texteSaisi[i] === texteOriginal[i]) {
+            resultat += '<span style="color: green">' + texteOriginal[i] + '</span>';
+        } else {
+            resultat += '<span style="color: red">' + texteOriginal[i] + '</span>';
+        }
+    }
+    
+    elements.challengeTexte.innerHTML = resultat;
 }
+
+// CALCUL DU TAUX
+function calculTaux() {
+    let calcul = spaceCount / 60 * 100;
+    elements.taux.textContent = calcul.toFixed(2) + "%";
+}
+
+// FONCTION END
+
+function end() {
+    clearInterval(timerInterval);
+}
+
+// DÉMARRAGE
+init();
