@@ -1,0 +1,104 @@
+*{
+    padding: 20;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/736x/41/9e/ee/419eee88c1581c027fcd0a46fe468b2d.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    
+}
+.container{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+    padding: 20px;
+}
+.container *{
+    padding: 10px;
+}
+.statistic{
+    width: 100%;
+    display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+
+}
+.statistic *{
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 15px 12px violet;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(5, 1, 108);
+
+}
+.statistic :hover{
+    box-shadow: 10px 15px 12px rgb(188, 248, 206);
+    
+    transition: all 1s;
+      cursor: pointer;
+
+
+}
+label{
+    font-size: 20px;
+}
+.input{
+    background-color: rgb(252, 250, 250);
+    height: 50px;
+    width: 800px;
+    border-radius: 10px;
+    border-color: violet;
+    border-style: outset;
+    border-width: 5px;
+    box-shadow: 10px 15px 12px violet;
+}
+
+#challenge_texte{
+    font-size: 20px;
+    text-align: center;
+
+}
+.btn{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+   border-color: violet;
+   color: blueviolet;
+   background-color: rgb(251, 186, 251);
+   box-shadow: 10px 10px 17px blueviolet;
+   font-size: 20px;
+   margin-bottom: 10px;
+}
+.btn:hover{
+border-color: rgb(151, 242, 149);
+   color: rgb(1, 73, 12);
+   background-color: rgb(177, 255, 180);
+   box-shadow: 10px 10px 17px rgb(14, 234, 21);
+transition: 0.5s;}
+/* Styles pour la coloration du texte */
+       .correct {
+    color: #28a745;
+}
+
+.incorrect {
+    color: #dc3545;
+    text-decoration: underline;
+}
