@@ -14,6 +14,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
     
+    
 }
 .container{
    
@@ -93,11 +94,11 @@ border-color: rgb(151, 242, 149);
    box-shadow: 10px 10px 17px rgb(14, 234, 21);
 transition: 0.5s;}
 /* Styles pour la coloration du texte */
-        .correct {
-            color: #28a745;
-        }
+       .correct {
+    color: #28a745;
+}
 
-        .incorrect {
-            color: #dc3545;
-            text-decoration: underline;
-        }
+.incorrect {
+    color: #dc3545;
+    text-decoration: underline;
+}
