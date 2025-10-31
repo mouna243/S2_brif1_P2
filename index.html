@@ -11,12 +11,12 @@
             <h1 style="color: blueviolet;">Typing Game </h1>
             <div class="statistic">
                 <div class="statistic_content">
-                    <h2><span>0</span></h2>
+                    <h2><span id="compteur">0</span></h2>
                     <p>Words/min</p>
                 </div>
                 <div class="statistic_content">
-                    <h2><span>100</span>%</h2>
-                    <p>correct words %</p>
+                    <h2><span id="taux" onclick="taux()">100</span>%</h2>
+                    <p>Score %</p>
                 </div>
                 <div class="statistic_content">
                     <h2><span id="timer" onclick="timer()">60</span> s</h2>
@@ -29,7 +29,8 @@
                 <input type="text" class="input" id="input"
                     placeholder="Ecrire le paragraphe ...">
             </div>
-            <button id="start" onclick="niveau()">Start</button>
+          <button id="start" class="btn"onclick="timer()">Start</button>
+          <button id="end" class="btn"onclick="end()">END</button>
         </div>
         <script src="typing.js"></script>
     </body>
