@@ -1,43 +1,36 @@
  <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>typing game</title>
- </head>
- <body>
-    <div class="container">
-         <h1 style="color: blueviolet;">Typing Game </h1>
-        <div class="statistic">
-            <div class="statistic_content">
-                <h2><span>0</span></h2>
-                <p>Words/min</p>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>typing game</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="color: blueviolet;">Typing Game </h1>
+            <div class="statistic">
+                <div class="statistic_content">
+                    <h2><span>0</span></h2>
+                    <p>Words/min</p>
+                </div>
+                <div class="statistic_content">
+                    <h2><span>100</span>%</h2>
+                    <p>correct words %</p>
+                </div>
+                <div class="statistic_content">
+                    <h2><span id="timer" onclick="timer()">60</span> s</h2>
+                    <p>timer</p>
+                </div>
             </div>
-            <div class="statistic_content">
-                <h2><span>100</span>%</h2>
-                <p>correct words %</p>
+            <div class="disply_text">
+                <p id="challenge_texte">La pluie tombe doucement sur la fenêtre, et chaque goutte semble raconter une histoire différente. Certaines s’écrasent en silence, d’autres glissent lentement, formant de petites rivières éphémères sur la vitre froide. Le son régulier crée une symphonie apaisante, presque hypnotique. Dans cette ambiance douce, le clavier devient un instrument de musique, les doigts suivent la cadence, et chaque mot s’aligne comme une note dans une partition invisible. Plus la concentration grandit, plus la vitesse s’harmonise avec le calme de la pluie.
+</p>
+                <input type="text" class="input" id="input"
+                    placeholder="Ecrire le paragraphe ...">
             </div>
-            <div class="statistic_content">
-                <h2><span>0</span> s</h2>
-                <p>timer</p>
-            </div>
+            <button id="start" onclick="niveau()">Start</button>
         </div>
-        <div class="disply_text">
-            <p id="challenge_texte"></p>
-            <input type="text" class="input" id="input" placeholder="Ecrire le paragraphe ...">
-        </div>
-        <div class="choix">
-          <p>Choisi un niveau :</p>
-        <select>
-            <option value="niveau1">niveau 1</option>
-            <option value="niveau2">niveau 2</option>
-            <option value="niveau3">niveau 3</option>
-        </select>
-        </div>
-        <button id="start">
-            Start
-        </button>
-    </div>
- </body>
- </html>
+        <script src="typing.js"></script>
+    </body>
+</html>
